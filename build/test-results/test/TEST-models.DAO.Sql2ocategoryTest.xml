@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.DAO.Sql2ocategoryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-01T13:03:35" hostname="dhosio" time="0.535">
+  <properties/>
+  <testcase name="canFindAllTheMealsInsideACategory" classname="models.DAO.Sql2ocategoryTest" time="0.487"/>
+  <testcase name="canGetASpecificCategory" classname="models.DAO.Sql2ocategoryTest" time="0.036"/>
+  <testcase name="canGetAllCategoriesInDatabase" classname="models.DAO.Sql2ocategoryTest" time="0.012"/>
+  <system-out><![CDATA[Database has been closed successfully
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

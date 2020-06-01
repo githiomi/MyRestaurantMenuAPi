@@ -32,11 +32,11 @@ public class App {
         Gson gson = new Gson();
 
 //        Remove the following 2 lines of code
-        String username = Constants.MY_USERNAME;
-        String password = Constants.MY_PASSWORD;
+        String username = Constants.getMyUsername();
+        String password = Constants.getMyPassword();
 
         String connectionString = "jdbc:postgresql://localhost:5432/renu";
-        Sql2o sql2o = new Sql2o(connectionString, "dhosio", "MaFaD@niel2019");
+        Sql2o sql2o = new Sql2o(connectionString, username, password);
         sql2oMeals = new Sql2oMeals(sql2o);
         sql2ocategory = new Sql2ocategory(sql2o);
         connection = sql2o.open();

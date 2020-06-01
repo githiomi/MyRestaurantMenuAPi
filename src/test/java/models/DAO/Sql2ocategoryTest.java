@@ -1,6 +1,7 @@
 package models.DAO;
 
 import models.Category;
+import models.Constants;
 import org.junit.*;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -13,10 +14,14 @@ public class Sql2ocategoryTest {
     private static Sql2ocategory sql2ocategory;
     private static Sql2oMeals sql2oMeals;
 
+    //        Remove the following 2 lines of code
+    private static String username = Constants.getMyUsername();
+    private static String password = Constants.getMyPassword();
+
     @BeforeClass
     public static void setUp() throws Exception {
         String connectionString = "jdbc:postgresql://localhost:5432/renu_test";
-        Sql2o sql2o = new Sql2o(connectionString, "dhosio", "MaFaD@niel2019");
+        Sql2o sql2o = new Sql2o(connectionString, username, password);
         sql2ocategory = new Sql2ocategory(sql2o);
         sql2oMeals = new Sql2oMeals(sql2o);
         conn = sql2o.open();
