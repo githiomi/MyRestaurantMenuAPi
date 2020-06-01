@@ -1,3 +1,4 @@
+import models.Constants;
 import models.DAO.Sql2oMeals;
 import models.DAO.Sql2ocategory;
 import org.sql2o.Connection;
@@ -29,6 +30,10 @@ public class App {
         Sql2ocategory sql2ocategory;
         Connection connection;
         Gson gson = new Gson();
+
+//        Remove the following 2 lines of code
+        String username = Constants.MY_USERNAME;
+        String password = Constants.MY_PASSWORD;
 
         String connectionString = "jdbc:postgresql://localhost:5432/renu";
         Sql2o sql2o = new Sql2o(connectionString, "dhosio", "MaFaD@niel2019");
