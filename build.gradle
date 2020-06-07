@@ -28,7 +28,6 @@ dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
     compile group: 'com.heroku.sdk', name: 'heroku-deploy', version: '3.0.2'
     compile 'com.googlecode.json-simple:json-simple:1.1'
-
 //    JSON object dependency
     compile group: 'org.json', name: 'json', version: '20200518'
 }
