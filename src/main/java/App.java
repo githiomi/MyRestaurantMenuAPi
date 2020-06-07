@@ -1,6 +1,9 @@
+import exceptions.ApiException;
+import models.Category;
 import models.Constants;
 import models.DAO.Sql2oMeals;
 import models.DAO.Sql2ocategory;
+import models.Meals;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import com.google.gson.Gson;
@@ -8,6 +11,7 @@ import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.*;
@@ -49,12 +53,28 @@ public class App {
 
         get("/meals", "application/json", (req, res) -> {
             res.type("application/json");
-            return gson.toJson(sql2oMeals.getAll());
+
+            List<Meals> allMeals = sql2oMeals.getAll();
+
+            if ( allMeals.size() > 0) {
+                res.status(201);
+                return gson.toJson(allMeals);
+            }
+            else {
+                throw new ApiException(404, String.format("There are no meals in the database"));
+            }
         });
 
         get("/categories", "application/json", (req, res) -> {
             res.type("application/json");
-            return gson.toJson(sql2ocategory.getAllCategories());
+
+            List<Category> allCategories= sql2ocategory.getAllCategories();
+
+            if ( allCategories.size() > 0 ) {
+                return gson.toJson(allCategories);
+            }else {
+                throw new ApiException(404, String.format("There are no categories in the database"));
+            }
         });
 
         get("/categories/:id", "application/json", (req, res) -> {
