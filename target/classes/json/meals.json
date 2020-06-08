@@ -1,0 +1,86 @@
+[
+  {
+    "Drinks" : [
+      {
+        "id" : 1,
+        "name": "Water",
+        "imageurl": "http://img.recipepuppy.com/5.jpg",
+        "Description": "Something to wash down the meal",
+        "Types": [
+          {
+            "id": "water.1",
+            "name": "Normal",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "Just plain water",
+            "price": "Ksh.90"
+          },
+          {
+            "id": "water.2",
+            "name": "Mineral",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "From the springs",
+            "price": "Ksh.90"
+          }
+        ]
+      },
+      {
+        "id" : 2,
+        "name" : "Soda",
+        "imageurl": "http://img.recipepuppy.com/5.jpg",
+        "Description" : "Fizzy drinks",
+        "types" : [
+          {
+            "id" : "soda.1",
+            "name": "Coca-Cola-Coke",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "Sugar free",
+            "price": "Ksh.100"
+          },
+          {
+            "id" : "soda.2",
+            "name": "Coca-Cola-Sprite",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "Sugar free",
+            "price": "Ksh.100"
+          },
+          {
+            "id" : "soda.3",
+            "name": "Coca-Cola-Krest",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "Bitter lemon",
+            "price": "Ksh.100"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name" : "Juices",
+        "imageurl": "http://img.recipepuppy.com/5.jpg",
+        "Description" : "Natural Juices",
+        "types" : [
+          {
+            "id" : "juices.1",
+            "name": "Mango-Juice",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "All Mangoes",
+            "price": "Ksh.70"
+          },
+          {
+            "id" : "juices.2",
+            "name": "Apple-Juice",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "All Apples",
+            "price": "Ksh.70"
+          },
+          {
+            "id" : "juices.3",
+            "name": "Avocado-Juice",
+            "imageurl": "http://img.recipepuppy.com/5.jpg",
+            "Description": "Mixed with a little of sugarcane",
+            "price": "Ksh.70"
+          }
+        ]
+      }
+    ]
+  }
+]

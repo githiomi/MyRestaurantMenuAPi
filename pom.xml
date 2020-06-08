@@ -3,11 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.githiomi.renu</groupId>
     <artifactId>Re-Nu</artifactId>
     <version>1.0</version>
-
     <dependencies>
         <!-- We need to list out ALL dependencies our project needs. If you have dependencies not listed here, but sure to add them -->
         <dependency>
@@ -16,14 +14,14 @@
             <version>2.7.2</version>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.3-1100-jdbc4</version>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-handlebars</artifactId>
+            <version>2.5.5</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.2.2</version>
+            <version>9.4.1208</version>
         </dependency>
         <dependency>
             <groupId>org.sql2o</groupId>
@@ -36,9 +34,9 @@
             <version>20090211</version>
         </dependency>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.5</version>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client-gson</artifactId>
+            <version>1.23.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -95,7 +93,7 @@
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Change this to YOUR application name! -->
-                    <appName>dhosio-renudatabase</appName>
+                    <appName>heroku addons:create heroku-postgresql:hobby-dev --app name-of-app</appName>
                     <processTypes>
                         <web>java -jar target/Re-Nu-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
@@ -103,6 +101,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
-

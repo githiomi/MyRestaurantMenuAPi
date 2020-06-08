@@ -1,0 +1,1 @@
+web: java -jar target/Re-Nu-1.0-jar-with-dependencies.jar
