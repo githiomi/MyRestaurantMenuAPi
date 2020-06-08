@@ -36,15 +36,16 @@ public class App {
         Gson gson = new Gson();
 
 //      Heroku database
-//        String connectionString = "jdbc:postgresql://ec2-3-222-30-53.compute-1.amazonaws.com/da14ef8b93cdec";
-//        String username = "dliwymnwsjslcc";
-//        String password = "b1b526b4235fb4a3c882eebb2d1c8f936a25e0c7d720f61f17d65aec34a6c7fb";
+        String connectionString = "jdbc:postgresql://ec2-3-222-30-53.compute-1.amazonaws.com/da14ef8b93cdec";
+        String username = "dliwymnwsjslcc";
+        String password = "b1b526b4235fb4a3c882eebb2d1c8f936a25e0c7d720f61f17d65aec34a6c7fb";
 
 //        Remove the following 2 lines of code
+        // Local postgresql
+        String connectionString = "jdbc:postgresql://localhost:5432/renu";
         String username = Constants.getMyUsername();
         String password = Constants.getMyPassword();
 
-        String connectionString = "jdbc:postgresql://localhost:5432/renu";
         Sql2o sql2o = new Sql2o(connectionString, username, password);
         sql2oMeals = new Sql2oMeals(sql2o);
         sql2ocategory = new Sql2ocategory(sql2o);
